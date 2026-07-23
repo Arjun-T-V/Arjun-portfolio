@@ -769,3 +769,39 @@ nav.hide-nav{
 .contact-item p{
     color:#aaa;
 }
+
+/* === Fixed Mobile Navigation === */
+@media (max-width:768px){
+ nav{padding:20px 8%;}
+ .nav-links{
+   position:fixed;
+   top:0;
+   left:-100%;
+   width:100%;
+   height:100vh;
+   display:flex;
+   flex-direction:column;
+   justify-content:center;
+   align-items:center;
+   gap:36px;
+   list-style:none;
+   background:#000;
+   transition:left .35s ease;
+   z-index:1500;
+ }
+ .nav-links.active{left:0;}
+ .hamburger{display:block;z-index:2001;}
+}
+@media (min-width:769px){
+ .hamburger{display:none;}
+ .nav-links{
+   position:static;
+   display:flex;
+   flex-direction:row;
+   gap:60px;
+   height:auto;
+   width:auto;
+   background:transparent;
+   list-style:none;
+ }
+}

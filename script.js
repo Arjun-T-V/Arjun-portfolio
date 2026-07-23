@@ -333,23 +333,24 @@ window.addEventListener("scroll", () => {
    MOBILE MENU
 ========================== */
 
-const hamburger = document.querySelector(".hamburger");
-const mobileMenu = document.querySelector('.nav-links');
+const hamburger=document.querySelector('.hamburger');
+const mobileMenu=document.querySelector('.nav-links');
 
-hamburger.addEventListener("click", () => {
-
-    hamburger.classList.toggle("active");
-    mobileMenu.classList.toggle('active');
-
-});
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        hamburger.classList.remove("active");
-        mobileMenu.classList.remove('active');
-
-    });
-
-});
+if(hamburger && mobileMenu){
+ hamburger.addEventListener('click',()=>{
+   hamburger.classList.toggle('active');
+   mobileMenu.classList.toggle('active');
+ });
+ document.querySelectorAll('.nav-links a').forEach(link=>{
+   link.addEventListener('click',()=>{
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+   });
+ });
+ document.addEventListener('click',(e)=>{
+   if(!hamburger.contains(e.target) && !mobileMenu.contains(e.target)){
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+   }
+ });
+}
