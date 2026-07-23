@@ -2,20 +2,37 @@
    LOADER
 ========================== */
 
+/* ==========================
+   LOADER (SHOW ONLY ON FIRST VISIT)
+========================== */
+
 window.addEventListener("load", () => {
 
     const loader = document.getElementById("loader");
 
+    // Already shown during this browser session
+    if (sessionStorage.getItem("loaderShown")) {
+
+        loader.style.display = "none";
+        return;
+
+    }
+
+    // Mark loader as shown
+    sessionStorage.setItem("loaderShown", "true");
+
     setTimeout(() => {
 
         loader.style.opacity = "0";
-        loader.style.transition = "opacity 0.8s ease";
+        loader.style.transition = "opacity .8s ease";
 
         setTimeout(() => {
+
             loader.style.display = "none";
+
         }, 800);
 
-    }, 2500);
+    }, 1500);
 
 });
 
@@ -27,11 +44,11 @@ window.addEventListener("load", () => {
 const typingElement = document.getElementById("typing");
 
 const words = [
-    "Software Developer",
-    "Web Developer",
+    "Digital Alchemist",
+    "Neural Nomad",
     "Python Developer",
     "Computer Engineering Student",
-    "Problem Solver"
+    "Troubleshooter"
 ];
 
 let wordIndex = 0;
@@ -310,5 +327,29 @@ window.addEventListener("scroll", () => {
     }
 
     lastScroll = currentScroll;
+
+});
+/* ==========================
+   MOBILE MENU
+========================== */
+
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.querySelector('.nav-links');
+
+hamburger.addEventListener("click", () => {
+
+    hamburger.classList.toggle("active");
+    mobileMenu.classList.toggle('active');
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        hamburger.classList.remove("active");
+        mobileMenu.classList.remove('active');
+
+    });
 
 });

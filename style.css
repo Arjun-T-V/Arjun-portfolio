@@ -656,68 +656,83 @@ footer{
     }
 }
 
-@media(max-width:768px){
+/* ==========================
+   MOBILE
+========================== */
 
-    nav{
+.hamburger{
+    display:none;
+    cursor:pointer;
+    z-index:2000;
+}
+
+.hamburger span{
+    display:block;
+    width:30px;
+    height:3px;
+    background:#fff;
+    margin:6px 0;
+    transition:.3s;
+}
+
+@media (max-width:768px){
+
+    .hamburger{
+        display:block;
+    }
+
+    .nav-links{
+
+        position:fixed;
+
+        top:0;
+        left:-100%;
+
+        width:100%;
+        height:100vh;
+
+        display:flex;
         flex-direction:column;
-        gap:15px;
-    }
-
-    nav ul{
-        flex-wrap:wrap;
         justify-content:center;
+        align-items:center;
+
+        gap:40px;
+
+        background:#000;
+
+        transition: .4s ease;
+
+        z-index:1500;
+    }
+    @media (min-width:769px){
+
+    .hamburger{
+        display:none;
     }
 
-    .hero-content h1{
-        font-size:3rem;
-    }
-
-    .hero-content h2{
-        font-size:1.2rem;
-    }
-
-    .section-header h2{
-        font-size:2rem;
-    }
-
-    section{
-        padding:90px 6%;
-    }
-}
-
-@media(max-width:500px){
-
-    .hero-content h1{
-        font-size:2.3rem;
-    }
-
-    .hero-small{
-        letter-spacing:2px;
-    }
-}
-@keyframes lightning{
-
-    0%{
-        opacity:0;
-    }
-
-    50%{
-        opacity:1;
-    }
-
-    100%{
-        opacity:.2;
+    .nav-links{
+        position:static;
+        width:auto;
+        height:auto;
+        display:flex;
+        flex-direction:row;
+        background:transparent;
     }
 
 }
-.logo,
-.hero-content h1,
-.hero-content h2,
-.section-header h2,
-.featured-info h3,
-.project-card h3{
-    font-family:'Oswald',sans-serif;
-    letter-spacing:1px;
+
+    .nav-links.active{
+        left:0;
+    }
+
+    .nav-links li{
+        list-style:none;
+    }
+
+    .nav-links a{
+        font-size:1.5rem;
+    }
+
 }
 /* ==========================
    NAVBAR SCROLL EFFECT
