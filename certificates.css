@@ -1,0 +1,227 @@
+/* ==========================
+   Reset
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================
+   Body
+========================== */
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+}
+
+/* ==========================
+   Back Button
+========================== */
+
+.back-btn {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+
+    padding: 12px 20px;
+
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 999px;
+
+    background: rgba(255,255,255,.05);
+
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ==========================
+   Hero Section
+========================== */
+
+.hero {
+    text-align: center;
+    padding: 120px 20px 60px;
+}
+
+.hero p:first-child {
+    color: #888;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.sub {
+    color: #aaa;
+}
+
+/* ==========================
+   Certificate Grid
+========================== */
+
+.gallery {
+
+    width: min(1200px, 90%);
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+
+    padding-bottom: 80px;
+
+}
+
+/* ==========================
+   Card
+========================== */
+
+.card {
+
+    background: #0a0a0a;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: .3s;
+
+}
+
+.card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+/* ==========================
+   Certificate Image
+========================== */
+
+.card img {
+
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    user-select: none;
+    -webkit-user-drag: none;
+
+}
+
+/* ==========================
+   Card Info
+========================== */
+
+.info {
+
+    padding: 20px;
+
+}
+
+.info p {
+
+    color: #999;
+
+    margin: 8px 0 20px;
+
+}
+
+/* ==========================
+   View Button
+========================== */
+
+.view-btn {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 999px;
+
+    background: #fff;
+    color: #000;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+/* ==========================
+   Fullscreen Modal
+========================== */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.92);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 5000;
+
+}
+
+.modal img {
+
+    max-width: 90%;
+    max-height: 85%;
+
+}
+
+/* ==========================
+   Close Button
+========================== */
+
+#close {
+
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    font-size: 48px;
+
+    cursor: pointer;
+
+}
+
+/* ==========================
+   Watermark
+========================== */
+
+.watermark {
+
+    position: absolute;
+
+    bottom: 25px;
+    right: 25px;
+
+    color: rgba(255,255,255,.2);
+
+    font-family: "Oswald", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+
+}

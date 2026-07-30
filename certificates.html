@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Certificates | Arjun T V</title>
+
+    <link rel="stylesheet" href="certificates.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <a href="index.html" class="back-btn">
+        ← Back Home
+    </a>
+
+    <section class="hero">
+        <p>CERTIFICATES</p>
+
+        <h1>Professional Certifications</h1>
+
+        <p class="sub">
+            A collection of my certifications, internships and workshops.
+        </p>
+    </section>
+
+    <section class="gallery">
+
+        <!-- Certificate 1 -->
+        <div class="card">
+            <img src="certificate/django.png"
+                alt="Python Full Stack Certificate">
+
+            <div class="info">
+                <h3>Python Full Stack Development</h3>
+                <p>Zoople Technologies</p>
+
+                <button class="view-btn"
+                    data-img="certificates/python-fullstack.jpg">
+                    View Certificate
+                </button>
+            </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="card">
+            <img src="certificate/python.png"
+                alt="SQL Certificate">
+
+            <div class="info">
+                <h3>SQL for Beginners</h3>
+                <p>Coursera</p>
+
+                <button class="view-btn"
+                    data-img="certificates/sql.jpg">
+                    View Certificate
+                </button>
+            </div>
+        </div>
+
+        <!-- Certificate 3 -->
+        <div class="card">
+            <img src="certificate/iot.png"
+                alt="IoT Workshop">
+
+            <div class="info">
+                <h3>IoT Workshop</h3>
+                <p>STEM Xpert</p>
+
+                <button class="view-btn"
+                    data-img="certificates/iot.jpg">
+                    View Certificate
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Image Viewer -->
+    <div id="modal" class="modal">
+
+        <span id="close">&times;</span>
+
+        <img id="modalImg" alt="Certificate">
+
+        <div class="watermark">
+            ARJUN T V
+        </div>
+
+    </div>
+
+    <script src="certificates.js"></script>
+
+</body>
+
+</html>
